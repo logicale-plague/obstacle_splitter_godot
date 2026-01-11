@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwbdjgkq7aern"]
+
+[ext_resource type="Script" uid="uid://5dj4wks2rhi6" path="res://settings.gd" id="1_x2hje"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwo76"]
+bg_color = Color(0.481789, 0.48179, 0.481789, 0.717647)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2hje"]
+bg_color = Color(0.17, 0.17, 0.17, 0.717647)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2hje")
+
+[node name="btnBack" type="Button" parent="."]
+layout_mode = 2
+offset_left = 900.0
+offset_top = 574.0
+offset_right = 1138.0
+offset_bottom = 629.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0.898039, 0.898039, 0.898039, 1)
+theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0.898039, 1)
+theme_override_colors/font_color = Color(0.899258, 0.899258, 0.899258, 1)
+theme_override_colors/font_pressed_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwo76")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2hje")
+text = "Back"
+
+[connection signal="pressed" from="btnBack" to="." method="_on_back_pressed"]
