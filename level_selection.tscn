@@ -19,7 +19,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -513.0
-offset_top = -266.0
+offset_top = -241.0
 offset_right = 513.0
 offset_bottom = 266.0
 grow_horizontal = 2
@@ -79,3 +79,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.985
+anchor_right = 1.0
+anchor_bottom = 0.025
+offset_left = -98.7201
+offset_top = 21.0
+offset_right = -63.0
+offset_bottom = 51.8
+grow_horizontal = 0
+
+[connection signal="pressed" from="btnExit" to="." method="_on_exit_pressed"]
